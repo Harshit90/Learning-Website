@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block title %}Contact{% endblock title %} {% block body %}
+
+<style>
+    body {
+        background-image: url("/static/bckcn.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    h1 {
+        margin-top: 100px
+    }
+</style>
+
+
+
+
+
+
+<div class="container" align="center">
+    <h1>Contact Us</h1>
+    <form method="POST" action="/contact">
+
+
+        {% csrf_token %}
+
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="name"><br><br>
+
+        <label for="Email">Email </label>
+        <input type="Email" id="Email" name="email" placeholder="name@example.com"><br><br>
+
+
+
+
+        <label for="Description">Write</label>
+        <input type="text" id="description" name="description" placeholder="write smthing....."><br><br>
+
+
+
+
+
+        <input type="submit" value="Submit">
+
+
+
+    </form>
+
+
+</div>
+
+{% endblock body %}
